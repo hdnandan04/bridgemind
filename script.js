@@ -1,26 +1,56 @@
+// Smooth scrolling for navigation links
+function scrollToSection(sectionId) {
+  const element = document.getElementById(sectionId)
+  if (element) {
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    })
+  }
+}
+
+// Add click event listeners to navigation links
 document.addEventListener("DOMContentLoaded", () => {
-  const navButtons = document.querySelectorAll(".nav-btn")
-  const scenes = document.querySelectorAll(".scene")
+  const navLinks = document.querySelectorAll(".nav-link")
 
-  // Navigation functionality
-  navButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      const targetId = this.id.replace("-btn", "")
-
-      // Remove active class from all buttons and scenes
-      navButtons.forEach((btn) => btn.classList.remove("active"))
-      scenes.forEach((scene) => scene.classList.remove("active"))
-
-      // Add active class to clicked button and corresponding scene
-      this.classList.add("active")
-      document.getElementById(targetId).classList.add("active")
-
-      // Smooth scroll to top
-      window.scrollTo({ top: 0, behavior: "smooth" })
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault()
+      const targetId = this.getAttribute("href").substring(1)
+      scrollToSection(targetId)
     })
   })
 
-  // Add animation to dialogue items when they come into view
+  // Mobile menu toggle
+  const hamburger = document.querySelector(".hamburger")
+  const navMenu = document.querySelector(".nav-menu")
+
+  if (hamburger && navMenu) {
+    hamburger.addEventListener("click", () => {
+      navMenu.classList.toggle("active")
+      hamburger.classList.toggle("active")
+    })
+  }
+
+  // Character card interactions
+  const characterCards = document.querySelectorAll(".character-card")
+
+  characterCards.forEach((card) => {
+    card.addEventListener("click", function () {
+      // Remove highlight from all cards
+      characterCards.forEach((c) => c.classList.remove("highlighted"))
+
+      // Add highlight to clicked card
+      this.classList.add("highlighted")
+
+      // Remove highlight after animation
+      setTimeout(() => {
+        this.classList.remove("highlighted")
+      }, 2000)
+    })
+  })
+
+  // Scroll animations
   const observerOptions = {
     threshold: 0.1,
     rootMargin: "0px 0px -50px 0px",
@@ -35,106 +65,131 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }, observerOptions)
 
-  // Observe all dialogue items
-  const dialogueItems = document.querySelectorAll(".dialogue-item")
-  dialogueItems.forEach((item) => {
-    item.style.opacity = "0"
-    item.style.transform = "translateY(20px)"
-    item.style.transition = "opacity 0.6s ease, transform 0.6s ease"
-    observer.observe(item)
+  // Observe all character cards and overview cards
+  const animatedElements = document.querySelectorAll(".character-card, .overview-card, .props-card, .tips-card")
+
+  animatedElements.forEach((el) => {
+    el.style.opacity = "0"
+    el.style.transform = "translateY(30px)"
+    el.style.transition = "opacity 0.6s ease, transform 0.6s ease"
+    observer.observe(el)
   })
 
-  // Add click effect to dialogue items
-  dialogueItems.forEach((item) => {
-    item.addEventListener("click", function () {
-      this.style.transform = "scale(1.02)"
-      setTimeout(() => {
-        this.style.transform = "scale(1)"
-      }, 200)
+  // Add active state to navigation based on scroll position
+  window.addEventListener("scroll", () => {
+    const sections = document.querySelectorAll(".section")
+    const navLinks = document.querySelectorAll(".nav-link")
+
+    let current = ""
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop
+      const sectionHeight = section.clientHeight
+
+      if (window.pageYOffset >= sectionTop - 200) {
+        current = section.getAttribute("id")
+      }
+    })
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active")
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active")
+      }
     })
   })
 
-  // Add typing effect to final dialogue
-  function typeWriter(element, text, speed = 50) {
+  // Add typing effect to hero title
+  const heroTitle = document.querySelector(".hero-title")
+  if (heroTitle) {
+    const text = heroTitle.innerHTML
+    heroTitle.innerHTML = ""
+
     let i = 0
-    element.innerHTML = ""
-
-    function type() {
+    const typeWriter = () => {
       if (i < text.length) {
-        element.innerHTML += text.charAt(i)
+        heroTitle.innerHTML += text.charAt(i)
         i++
-        setTimeout(type, speed)
+        setTimeout(typeWriter, 50)
       }
     }
-    type()
+
+    setTimeout(typeWriter, 500)
   }
 
-  // Apply typing effect to group dialogue when scene 2 is active
-  const scene2Button = document.getElementById("scene2-btn")
-  scene2Button.addEventListener("click", () => {
-    setTimeout(() => {
-      const groupDialogue = document.querySelector(".dialogue-item.group .dialogue")
-      if (groupDialogue) {
-        const originalText = groupDialogue.textContent
-        typeWriter(groupDialogue, originalText, 80)
-      }
-    }, 1000)
-  })
+  // Add parallax effect to hero section
+  window.addEventListener("scroll", () => {
+    const scrolled = window.pageYOffset
+    const hero = document.querySelector(".hero")
 
-  // Add hover effects to cast members
-  const castMembers = document.querySelectorAll(".cast-member")
-  castMembers.forEach((member) => {
-    member.addEventListener("mouseenter", function () {
-      this.style.transform = "translateY(-10px) scale(1.02)"
-    })
-
-    member.addEventListener("mouseleave", function () {
-      this.style.transform = "translateY(0) scale(1)"
-    })
-  })
-
-  // Add keyboard navigation
-  document.addEventListener("keydown", (e) => {
-    const activeButton = document.querySelector(".nav-btn.active")
-    const buttons = Array.from(navButtons)
-    const currentIndex = buttons.indexOf(activeButton)
-
-    if (e.key === "ArrowLeft" && currentIndex > 0) {
-      buttons[currentIndex - 1].click()
-    } else if (e.key === "ArrowRight" && currentIndex < buttons.length - 1) {
-      buttons[currentIndex + 1].click()
+    if (hero) {
+      const rate = scrolled * -0.5
+      hero.style.transform = `translateY(${rate}px)`
     }
   })
 
-  // Add progress indicator
-  function createProgressIndicator() {
-    const progressContainer = document.createElement("div")
-    progressContainer.style.cssText = `
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.2);
-            z-index: 1000;
-        `
+  // Add click-to-copy functionality for character dialogues
+  const dialogues = document.querySelectorAll(".dialogue p")
 
-    const progressBar = document.createElement("div")
-    progressBar.style.cssText = `
-            height: 100%;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            width: 0%;
-            transition: width 0.3s ease;
-        `
+  dialogues.forEach((dialogue) => {
+    dialogue.addEventListener("click", function () {
+      const text = this.textContent
+      navigator.clipboard.writeText(text).then(() => {
+        // Show temporary feedback
+        const originalText = this.textContent
+        this.textContent = "Copied to clipboard!"
+        this.style.color = "#2ed573"
 
-    progressContainer.appendChild(progressBar)
-    document.body.appendChild(progressContainer)
-
-    window.addEventListener("scroll", () => {
-      const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
-      progressBar.style.width = scrolled + "%"
+        setTimeout(() => {
+          this.textContent = originalText
+          this.style.color = ""
+        }, 1500)
+      })
     })
-  }
-
-  createProgressIndicator()
+  })
 })
+
+// Add CSS for active navigation state
+const style = document.createElement("style")
+style.textContent = `
+    .nav-link.active {
+        color: #667eea;
+        font-weight: 600;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    .dialogue p {
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .dialogue p:hover {
+        opacity: 0.8;
+        transform: scale(1.02);
+    }
+`
+
+document.head.appendChild(style)
