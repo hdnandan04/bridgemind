@@ -3,392 +3,891 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BridgeMind: The Corporate Drama</title>
+    <title>From Zero to Viral: The Ultimate Digital Comeback</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">🎭 BridgeMind</div>
-            <ul class="nav-menu">
-                <li><a href="#overview" class="nav-link">Overview</a></li>
-                <li><a href="#scene1" class="nav-link">Scene 1</a></li>
-                <li><a href="#scene2" class="nav-link">Scene 2</a></li>
-                <li><a href="#props" class="nav-link">Props & Tips</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    <header>
+    <h1>🎭 Corporate Drama Collection</h1>
+    <p>Two powerful stories of team dynamics and comeback</p>
+</header>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">🎭 <span class="gradient-text">BridgeMind</span>: The Corporate Drama</h1>
-            <p class="hero-subtitle">A startup faces a breakdown… and stages a powerful comeback by working as a team</p>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">⏳ 8</span>
-                    <span class="stat-label">Minutes</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">🎟 8</span>
-                    <span class="stat-label">Characters</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">🎬 2</span>
-                    <span class="stat-label">Scenes</span>
-                </div>
-            </div>
-            <button class="cta-button" onclick="scrollToSection('overview')">Start Reading</button>
-        </div>
-        <div class="hero-visual">
-            <div class="floating-card">
-                <div class="card-content">
-                    <h3>🚨 RULE</h3>
-                    <p>No one plays the same role in Scene 2</p>
-                </div>
-            </div>
-        </div>
-    </header>
+    <nav class="main-nav">
+    <button id="viral-btn" class="script-btn active">🚀 From Zero to Viral</button>
+    <button id="bridgemind-btn" class="script-btn">🎭 BridgeMind Drama</button>
+</nav>
+
+<nav class="scene-nav" id="viral-nav">
+    <button id="act1-btn" class="nav-btn active">Act 1: The Digital Disaster</button>
+    <button id="act15-btn" class="nav-btn">Act 1.5: The Spark</button>
+    <button id="act2-btn" class="nav-btn">Act 2: The Viral Victory</button>
+    <button id="cast-btn" class="nav-btn">Meet the Team</button>
+</nav>
+
+<nav class="scene-nav" id="bridgemind-nav" style="display: none;">
+    <button id="scene1-btn" class="nav-btn active">Scene 1: The Breakdown</button>
+    <button id="scene2-btn" class="nav-btn">Scene 2: The Comeback</button>
+    <button id="bridgecast-btn" class="nav-btn">Meet BridgeMind Team</button>
+</nav>
 
     <main>
-        <section id="overview" class="section overview">
-            <div class="container">
-                <h2 class="section-title">📋 Overview</h2>
-                <div class="overview-grid">
-                    <div class="overview-card">
-                        <h3>🎬 Theme</h3>
-                        <p>A startup faces a breakdown and stages a powerful comeback by working as a team</p>
+        <!-- Act 1: The Digital Disaster -->
+        <section id="act1" class="scene active">
+            <div class="scene-header disaster">
+                <h2>🎬 ACT 1: THE DIGITAL DISASTER</h2>
+                <div class="scene-setup">
+                    <p>🎥 <strong>Setting:</strong> A messy room cluttered with laptops, phones, and empty pizza boxes.</p>
+                    <p>The atmosphere is heavy with defeat. The team members are slumped in their chairs, looking exhausted.</p>
+                </div>
+            </div>
+
+            <div class="dialogue-container">
+                <div class="stage-direction-block">
+                    <p><em>(HITESH enters, slams his phone down on a table, and paces.)</em></p>
+                </div>
+
+                <div class="dialogue-item" data-character="hitesh">
+                    <div class="character-info">
+                        <strong>HITESH</strong>
+                        <span class="role">The Leader (Stressed Founder)</span>
                     </div>
-                    <div class="overview-card">
-                        <h3>⏳ Duration</h3>
-                        <p>Approximately 8 minutes total</p>
+                    <div class="dialogue">
+                        That's it! Another client just cancelled! "Your content doesn't align with our brand vision," they said! A direct quote!
                     </div>
-                    <div class="overview-card">
-                        <h3>🎟 Characters</h3>
-                        <p>8 team members with role switches</p>
+                </div>
+
+                <div class="dialogue-item" data-character="suyash">
+                    <div class="character-info">
+                        <strong>SUYASH</strong>
+                        <span class="stage-direction">(Sighs, without looking up from his laptop)</span>
+                        <span class="role">The Salesman (Defeated Rep)</span>
                     </div>
-                    <div class="overview-card">
-                        <h3>🎬 Format</h3>
-                        <p>Scene 1 (crisis) ➡ Scene 2 (comeback)</p>
+                    <div class="dialogue">
+                        That's three clients this month, Hitesh. Our projected revenue is down 70%. We're officially in the red.
                     </div>
+                </div>
+
+                <div class="dialogue-item" data-character="lavanya">
+                    <div class="character-info">
+                        <strong>LAVANYA</strong>
+                        <span class="stage-direction">(Voice cracking with frustration)</span>
+                        <span class="role">The Creator (Frustrated Artist)</span>
+                    </div>
+                    <div class="dialogue">
+                        My latest reel is stuck at 12 views! TWELVE! My mother gets more engagement on her blurry flower photos!
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="shravani">
+                    <div class="character-info">
+                        <strong>SHRAVANI</strong>
+                        <span class="role">The Manager (Anxious Multitasker)</span>
+                    </div>
+                    <div class="dialogue">
+                        I'm juggling eight different clients across twelve platforms and nothing is working! The engagement is falling off a cliff for every single one.
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="shraddha">
+                    <div class="character-info">
+                        <strong>SHRADDHA</strong>
+                        <span class="stage-direction">(Defensively, scrolling on her phone)</span>
+                        <span class="role">The Designer (Defensive Perfectionist)</span>
+                    </div>
+                    <div class="dialogue">
+                        The client said my graphics look like they're from 2015! I can't create modern designs with a zero-dollar budget for stock images!
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="yashkumar">
+                    <div class="character-info">
+                        <strong>YASHKUMAR</strong>
+                        <span class="stage-direction">(Slams his laptop shut after it freezes)</span>
+                        <span class="role">The Technician (Frustrated Editor)</span>
+                    </div>
+                    <div class="dialogue">
+                        How am I supposed to edit viral videos when this museum piece crashes every ten minutes? I can't even render a 30-second clip!
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="parth">
+                    <div class="character-info">
+                        <strong>PARTH</strong>
+                        <span class="stage-direction">(Reading from his screen, voice monotone)</span>
+                        <span class="role">The Analyst (Pessimistic Data-Mind)</span>
+                    </div>
+                    <div class="dialogue">
+                        The numbers don't lie. Average engagement is down 45%, reach is down 60%, and our follower growth is negative. We're not just invisible; we're actively losing ground.
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="om">
+                    <div class="character-info">
+                        <strong>OM</strong>
+                        <span class="role">The Networker (Demoralized Extrovert)</span>
+                    </div>
+                    <div class="dialogue">
+                        I've personally messaged 200 influencers this month. Five replied. And three of them were asking us to pay them.
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="lavanya">
+                    <div class="character-info">
+                        <strong>LAVANYA</strong>
+                        <span class="stage-direction">(Puts her head in her hands, close to tears)</span>
+                    </div>
+                    <div class="dialogue">
+                        I spent six hours on that stupid dance reel. Six hours. It got 8 views and 1 like... from my dad.
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="hitesh">
+                    <div class="character-info">
+                        <strong>HITESH</strong>
+                    </div>
+                    <div class="dialogue">
+                        How are we supposed to grow other people's social media when our own is a graveyard?
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="suyash">
+                    <div class="character-info">
+                        <strong>SUYASH</strong>
+                        <span class="stage-direction">(Looks at Shraddha)</span>
+                    </div>
+                    <div class="dialogue">
+                        Maybe if our pitch decks looked more professional...
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="shraddha">
+                    <div class="character-info">
+                        <strong>SHRADDHA</strong>
+                        <span class="stage-direction">(Angrily)</span>
+                    </div>
+                    <div class="dialogue">
+                        Professional? I'm using free software and my own phone's camera! What do you want from me?
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="hitesh">
+                    <div class="character-info">
+                        <strong>HITESH</strong>
+                        <span class="stage-direction">(Defeated)</span>
+                    </div>
+                    <div class="dialogue">
+                        Maybe my parents were right. Maybe we should just get regular jobs.
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="suyash">
+                    <div class="character-info">
+                        <strong>SUYASH</strong>
+                    </div>
+                    <div class="dialogue">
+                        I have an interview at a call center tomorrow morning. At least the paycheck is stable.
+                    </div>
+                </div>
+
+                <div class="stage-direction-block">
+                    <p><em>(The room falls into a heavy, defeated silence. Everyone stares blankly, the failure hanging in the air.)</em></p>
                 </div>
             </div>
         </section>
 
-        <section id="scene1" class="section scene1">
-            <div class="container">
-                <div class="scene-header">
-                    <h2 class="scene-title">🎬 Scene 1: "The Breakdown"</h2>
-                    <div class="scene-details">
-                        <span class="detail">⏱ Duration: ~4 minutes</span>
-                        <span class="detail">🎵 Background: Low, tense music</span>
-                        <span class="detail">💡 Lighting: Dim</span>
-                    </div>
-                    <p class="scene-setup">🪑 Scene setup: Everyone is scattered, not making eye contact. Display stress and distance.</p>
+        <!-- Act 1.5: The Spark -->
+        <section id="act15" class="scene">
+            <div class="scene-header spark">
+                <h2>🎬 ACT 1.5: THE SPARK</h2>
+                <div class="scene-setup">
+                    <p>🎥 <strong>Setting:</strong> The same defeated silence, moments later.</p>
+                </div>
+            </div>
+
+            <div class="dialogue-container">
+                <div class="stage-direction-block">
+                    <p><em>(PARTH is the only one still staring at his screen, a flicker of curiosity on his face.)</em></p>
                 </div>
 
-                <div class="characters-grid">
-                    <div class="character-card breakdown" data-character="hitesh">
-                        <div class="character-header">
-                            <h3>👨‍💼 Hitesh – CEO</h3>
-                            <span class="character-position">(center stage, pacing)</span>
-                        </div>
-                        <div class="dialogue">
-                            <span class="tone">🎙️ (Tone: stressed, angry)</span>
-                            <p>"We missed the beta deadline. The lead client just pulled out. We have two weeks of cash. Where did we go wrong?"</p>
-                        </div>
+                <div class="dialogue-item" data-character="parth">
+                    <div class="character-info">
+                        <strong>PARTH</strong>
+                        <span class="stage-direction">(Quietly, almost to himself)</span>
                     </div>
-
-                    <div class="character-card breakdown" data-character="yash">
-                        <div class="character-header">
-                            <h3>👨‍💻 Yash – CTO</h3>
-                            <span class="character-position">(typing, eyes down)</span>
-                        </div>
-                        <div class="dialogue">
-                            <span class="tone">🎙️ (Tone: quiet, guilty)</span>
-                            <p>"I'm sorry. We underestimated integration time again… I couldn't run the final test build."</p>
-                        </div>
-                    </div>
-
-                    <div class="character-card breakdown" data-character="om">
-                        <div class="character-header">
-                            <h3>🎨 Om Birla – Designer</h3>
-                            <span class="character-position">(holding crumpled UI sketches)</span>
-                        </div>
-                        <div class="dialogue">
-                            <span class="tone">🎙️ (Tone: emotional, defensive)</span>
-                            <p>"You asked for last-minute changes after I finalized the UI. I stayed up 48 hours fixing it!"</p>
-                        </div>
-                    </div>
-
-                    <div class="character-card breakdown" data-character="parth">
-                        <div class="character-header">
-                            <h3>💰 Parth – Finance</h3>
-                            <span class="character-position">(slams notebook down)</span>
-                        </div>
-                        <div class="dialogue">
-                            <span class="tone">🎙️ (Tone: sharp, factual)</span>
-                            <p>"We didn't plan backend testing in the budget at all—that's on you, Yash. We're bleeding money."</p>
-                        </div>
-                    </div>
-
-                    <div class="character-card breakdown" data-character="lavanya">
-                        <div class="character-header">
-                            <h3>📣 Lavanya – Marketing</h3>
-                            <span class="character-position">(waves iPad)</span>
-                        </div>
-                        <div class="dialogue">
-                            <span class="tone">🎙️ (Tone: exasperated)</span>
-                            <p>"We spent 40k on ads, but the landing page barely loaded. What was the point?!"</p>
-                        </div>
-                    </div>
-
-                    <div class="character-card breakdown" data-character="riya">
-                        <div class="character-header">
-                            <h3>📋 Riya – Operations</h3>
-                            <span class="character-position">(slowly rises, arms crossed)</span>
-                        </div>
-                        <div class="dialogue">
-                            <span class="tone">🎙️ (Tone: calm but regretful)</span>
-                            <p>"No use pointing fingers. The development schedule didn't match the campaign timeline. That was my mistake."</p>
-                        </div>
-                    </div>
-
-                    <div class="character-card breakdown" data-character="neeraj">
-                        <div class="character-header">
-                            <h3>🧑‍🎓 Neeraj – Intern</h3>
-                            <span class="character-position">(steps forward, nervous)</span>
-                        </div>
-                        <div class="dialogue">
-                            <span class="tone">🎙️ (Tone: hesitant)</span>
-                            <p>"Umm... I forgot to follow up with investors. I thought someone else was handling it. I'm really sorry."</p>
-                        </div>
-                    </div>
-
-                    <div class="character-card breakdown" data-character="anusha">
-                        <div class="character-header">
-                            <h3>🫱 Anusha – HR</h3>
-                            <span class="character-position">(steps in, calm and compassionate)</span>
-                        </div>
-                        <div class="dialogue">
-                            <span class="tone">🎙️ (Tone: mediator, firm yet kind)</span>
-                            <p>"Enough. Yes, we all made mistakes. But we're still a team. Let's own it, fix it, and fight for a comeback."</p>
-                        </div>
+                    <div class="dialogue">
+                        Wait a second... that's... odd.
                     </div>
                 </div>
 
-                <div class="scene-finale">
-                    <div class="spotlight">
-                        <h4>🎭 [Everyone FREEZES. Spotlight on Hitesh.]</h4>
-                        <div class="final-dialogue">
-                            <p><strong>Hitesh</strong> (Tone: slow, determined): "…Fine. We've got 7 days. Let's do this right."</p>
-                            <div class="assignments">
-                                <p>🎙️ (He points and assigns)</p>
-                                <ul>
-                                    <li><strong>Anusha</strong>, coordinate retrospectives.</li>
-                                    <li><strong>Riya</strong>, create a realistic timeline.</li>
-                                    <li><strong>Yash</strong>, simplify the MVP.</li>
-                                </ul>
-                                <p class="final-line">"Let's pivot—and rebuild BridgeMind."</p>
-                            </div>
-                        </div>
+                <div class="dialogue-item" data-character="shravani">
+                    <div class="character-info">
+                        <strong>SHRAVANI</strong>
+                        <span class="stage-direction">(Without looking up, annoyed)</span>
                     </div>
-                    <p class="scene-end">🚦 [Lights fade. Curtain closes. End Scene 1]</p>
+                    <div class="dialogue">
+                        What now? Did our follower count go into negative numbers?
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="parth">
+                    <div class="character-info">
+                        <strong>PARTH</strong>
+                    </div>
+                    <div class="dialogue">
+                        No... look. That reel Lavanya did... the one with 8 views? The one your dad liked? The average watch time is 98%. Everyone who did see it, watched the entire thing. The algorithm buried it, but the few people it reached were hooked. The problem wasn't the content.
+                    </div>
+                </div>
+
+                <div class="stage-direction-block">
+                    <p><em>(A few heads lift. HITESH leans in, intrigued.)</em></p>
+                </div>
+
+                <div class="dialogue-item" data-character="hitesh">
+                    <div class="character-info">
+                        <strong>HITESH</strong>
+                    </div>
+                    <div class="dialogue">
+                        What do you mean?
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="lavanya">
+                    <div class="character-info">
+                        <strong>LAVANYA</strong>
+                        <span class="stage-direction">(Miserably)</span>
+                    </div>
+                    <div class="dialogue">
+                        I didn't even try on that one. It was just a stupid, authentic moment of me being frustrated with our tech. No trending audio, no flashy effects. It was… real.
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="hitesh">
+                    <div class="character-info">
+                        <strong>HITESH</strong>
+                        <span class="stage-direction">(A slow realization dawns on his face)</span>
+                    </div>
+                    <div class="dialogue">
+                        We've been trying to copy what's already viral. We're desperately trying to be like everyone else. What if... what if we stop?
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="suyash">
+                    <div class="character-info">
+                        <strong>SUYASH</strong>
+                    </div>
+                    <div class="dialogue">
+                        Stop what? Stop working?
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="hitesh">
+                    <div class="character-info">
+                        <strong>HITESH</strong>
+                    </div>
+                    <div class="dialogue">
+                        No. Stop taking on twelve different clients who drain our energy. For the next ten days, we have only one client.
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="shraddha">
+                    <div class="character-info">
+                        <strong>SHRADDHA</strong>
+                    </div>
+                    <div class="dialogue">
+                        We don't have any clients left to focus on.
+                    </div>
+                </div>
+
+                <div class="dialogue-item final" data-character="hitesh">
+                    <div class="character-info">
+                        <strong>HITESH</strong>
+                        <span class="stage-direction">(Stands up, a new energy in his voice)</span>
+                    </div>
+                    <div class="dialogue">
+                        Yes, we do. Us. We are our own client. We will use Lavanya's raw, authentic style. We'll tell our own story. The story of a team on the brink of failure. Let's see if that gets more than 12 views.
+                    </div>
+                </div>
+
+                <div class="stage-direction-block">
+                    <p><em>(For the first time, everyone looks at each other, a tiny glimmer of hope replacing despair.)</em></p>
+                    <p><em>(Lights dim.)</em></p>
                 </div>
             </div>
         </section>
 
-        <section id="scene2" class="section scene2">
-            <div class="container">
-                <div class="scene-header">
-                    <h2 class="scene-title">🎬 Scene 2: "The Comeback"</h2>
-                    <div class="scene-details">
-                        <span class="detail">⏱ Duration: ~4 minutes</span>
-                        <span class="detail">🎵 Background: Uplifting music</span>
-                        <span class="detail">💡 Lighting: Bright</span>
-                    </div>
-                    <p class="scene-setup">🪑 Scene setup: Team stands in a circle, closer. Smiling, high energy. Props like charts, tablets, etc.</p>
-                    <p class="role-switch">🎭 Each person now plays a <strong>new role</strong>, showing growth and teamwork.</p>
+        <!-- Act 2: The Viral Victory -->
+        <section id="act2" class="scene">
+            <div class="scene-header victory">
+                <h2>🎬 ACT 2: THE VIRAL VICTORY</h2>
+                <div class="scene-setup">
+                    <p>🎥 <strong>Setting:</strong> The same space, but transformed. It's now a professional, energetic hub with ring lights, multiple monitors showing impressive analytics, and a branded backdrop.</p>
+                    <p>The team is confident, dressed professionally, and buzzing with energy.</p>
+                </div>
+            </div>
+
+            <div class="dialogue-container">
+                <div class="stage-direction-block">
+                    <p><em>(The team is in a celebratory morning huddle, coffee mugs in hand.)</em></p>
                 </div>
 
-                <div class="characters-grid">
-                    <div class="character-card comeback" data-character="yash">
-                        <div class="character-header">
-                            <h3>👨‍💻 Yash – New CEO</h3>
-                            <span class="character-position">(stands confidently with clipboard)</span>
-                        </div>
-                        <div class="dialogue">
-                            <span class="tone">🎙️ (Tone: firm and cheerful)</span>
-                            <p>"We focused only on what mattered. Cut noise. Delivered our MVP in 6 days—and the client returned!"</p>
-                        </div>
+                <div class="dialogue-item" data-character="hitesh">
+                    <div class="character-info">
+                        <strong>HITESH</strong>
+                        <span class="stage-direction">(Smiling, looking at a whiteboard filled with successful campaign ideas)</span>
+                        <span class="role">→ Confident Strategist</span>
                     </div>
-
-                    <div class="character-card comeback" data-character="parth">
-                        <div class="character-header">
-                            <h3>📣 Parth – New Marketing Head</h3>
-                            <span class="character-position">(holds phone, excited)</span>
-                        </div>
-                        <div class="dialogue">
-                            <span class="tone">🎙️ (Tone: energetic)</span>
-                            <p>"This time, the ad campaign and the final landing page were in sync! 1,200 sign-ups on launch day!"</p>
-                        </div>
-                    </div>
-
-                    <div class="character-card comeback" data-character="om">
-                        <div class="character-header">
-                            <h3>🧑‍🎓 Om Birla – New Intern</h3>
-                            <span class="character-position">(wide smile, holding a sticky note pad)</span>
-                        </div>
-                        <div class="dialogue">
-                            <span class="tone">🎙️ (Tone: proud, light)</span>
-                            <p>"I scheduled standups, tracked Jira, AND organized the snack schedule. I feel... useful!"</p>
-                        </div>
-                    </div>
-
-                    <div class="character-card comeback" data-character="lavanya">
-                        <div class="character-header">
-                            <h3>💰 Lavanya – New Finance Lead</h3>
-                            <span class="character-position">(points to budget chart)</span>
-                        </div>
-                        <div class="dialogue">
-                            <span class="tone">🎙️ (Tone: excited, practical)</span>
-                            <p>"We revamped the budget. Canceled non-essentials, focused on backend testing first. No overspend at all!"</p>
-                        </div>
-                    </div>
-
-                    <div class="character-card comeback" data-character="hitesh">
-                        <div class="character-header">
-                            <h3>👨‍🎨 Hitesh – New Designer</h3>
-                            <span class="character-position">(holds tablet, showing final UI)</span>
-                        </div>
-                        <div class="dialogue">
-                            <span class="tone">🎙️ (Tone: joyful, jokingly confident)</span>
-                            <p>"I admit it… design isn't easy. But hey, my UI got compliments on LinkedIn!"</p>
-                        </div>
-                    </div>
-
-                    <div class="character-card comeback" data-character="anusha">
-                        <div class="character-header">
-                            <h3>👩‍💼 Anusha – New CTO</h3>
-                            <span class="character-position">(holds small whiteboard with 'DONE' tasks)</span>
-                        </div>
-                        <div class="dialogue">
-                            <span class="tone">🎙️ (Tone: sharp & techy)</span>
-                            <p>"Dev flow was clean. Simple roadmap. Git commits hit every night. Pure joy."</p>
-                        </div>
-                    </div>
-
-                    <div class="character-card comeback" data-character="neeraj">
-                        <div class="character-header">
-                            <h3>📋 Neeraj – New Operations Lead</h3>
-                            <span class="character-position">(nods proudly)</span>
-                        </div>
-                        <div class="dialogue">
-                            <span class="tone">🎙️ (Tone: smooth, calm)</span>
-                            <p>"With better task alignment, we finished one day early. Now we're operating like a real company."</p>
-                        </div>
-                    </div>
-
-                    <div class="character-card comeback" data-character="riya">
-                        <div class="character-header">
-                            <h3>🧑‍⚖️ Riya – New HR Head</h3>
-                            <span class="character-position">(holds team photo or board)</span>
-                        </div>
-                        <div class="dialogue">
-                            <span class="tone">🎙️ (Tone: warm and supportive)</span>
-                            <p>"We built a safe space. Every voice mattered. We even voted for 'Team Hero of the Week'—guess who won?"</p>
-                        </div>
+                    <div class="dialogue">
+                        Another milestone month, team! Suyash, why don't you share the big news?
                     </div>
                 </div>
 
-                <div class="scene-finale comeback-finale">
-                    <div class="team-unity">
-                        <h4>🎭 [Everyone gathers in center, places hand on team logo or imaginary table.]</h4>
-                        <div class="final-chant">
-                            <p class="all-together">🎙️ All (together):</p>
-                            <p class="final-message">"Whatever role we play… <strong>TEAMWORK is our real strength!</strong>"</p>
-                        </div>
+                <div class="dialogue-item" data-character="suyash">
+                    <div class="character-info">
+                        <strong>SUYASH</strong>
+                        <span class="stage-direction">(Beaming)</span>
+                        <span class="role">→ Client Success Manager</span>
                     </div>
-                    <p class="scene-end">🎵 [Music swells. Lights fade. Curtain closes. Applause.]</p>
+                    <div class="dialogue">
+                        The lifestyle brand just signed their Phase 2 contract. That makes them our 52nd active partner. Our waiting list is officially longer than our client list!
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="lavanya">
+                    <div class="character-info">
+                        <strong>LAVANYA</strong>
+                        <span class="stage-direction">(Excitedly turns her monitor around)</span>
+                        <span class="role">→ Innovative Head of Creative</span>
+                    </div>
+                    <div class="dialogue">
+                        And you HAVE to see this! The "Real Fitness" campaign just broke 2.1 million views! It's trending on three platforms, and we didn't use a single trending audio!
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="shraddha">
+                    <div class="character-info">
+                        <strong>SHRADDHA</strong>
+                        <span class="stage-direction">(Proudly holds up a glossy marketing magazine)</span>
+                        <span class="role">→ Award-Winning Director</span>
+                    </div>
+                    <div class="dialogue">
+                        Speaking of real, Marketing Today just featured our eco-startup design. They called it "Revolutionary visual storytelling." A far cry from "looks like it's from 2015," huh? (She smirks victoriously.)
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="parth">
+                    <div class="character-info">
+                        <strong>PARTH</strong>
+                        <span class="stage-direction">(Points to a large screen showing a graph with a dramatic upward spike)</span>
+                        <span class="role">→ Performance Marketing Lead</span>
+                    </div>
+                    <div class="dialogue">
+                        This is still my favorite sight. Remember this flatline? That was us, hiding at 3% reach. And this… (He gestures to the massive spike) ...is what happens when you stop chasing the algorithm and start telling human stories. We cracked the code.
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="om">
+                    <div class="character-info">
+                        <strong>OM</strong>
+                        <span class="role">→ Influencer Partnership Director</span>
+                    </div>
+                    <div class="dialogue">
+                        And it flipped the script completely. I don't chase influencers anymore. Their managers are in my DMs. They want to partner with the agency that makes brands feel human.
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="yashkumar">
+                    <div class="character-info">
+                        <strong>YASHKUMAR</strong>
+                        <span class="stage-direction">(Gestures to his new, high-tech setup)</span>
+                        <span class="role">→ Creative Technology Head</span>
+                    </div>
+                    <div class="dialogue">
+                        Plus, having AI-powered editing and a signature video style means every video we produce has viral potential right out of the gate. Our tech finally works for us.
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="suyash">
+                    <div class="character-info">
+                        <strong>SUYASH</strong>
+                    </div>
+                    <div class="dialogue">
+                        I was just on the phone with the bakery. You know, our very first client after our "reboot." They're opening their 12th outlet next month. Said it wouldn't have happened without us.
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="parth">
+                    <div class="character-info">
+                        <strong>PARTH</strong>
+                    </div>
+                    <div class="dialogue">
+                        Their success is what got that tech startup to call us! They raised $5 million in funding, and they credited our brand story for getting them noticed by investors.
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="hitesh">
+                    <div class="character-info">
+                        <strong>HITESH</strong>
+                    </div>
+                    <div class="dialogue">
+                        Forbes featured us. "Top 10 Young Marketing Agencies to Watch." They called us the "digital comeback kings." If only they knew how close we were to the bottom.
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="lavanya">
+                    <div class="character-info">
+                        <strong>LAVANYA</strong>
+                    </div>
+                    <div class="dialogue">
+                        We did this by believing in one crazy idea when we had nothing left to lose. We did it by being a team.
+                    </div>
+                </div>
+
+                <div class="dialogue-item final group" data-character="all">
+                    <div class="character-info">
+                        <strong>ALL</strong>
+                        <span class="stage-direction">(Raising mugs and fists in the air, a powerful, unified chant)</span>
+                    </div>
+                    <div class="dialogue">
+                        FROM ZERO TO VIRAL!
+                    </div>
+                </div>
+
+                <div class="stage-direction-block">
+                    <p><em>(The air is filled with the sound of multiple, rapid-fire notification pings from their devices. Everyone shares a knowing, confident smile as they look at their screens. The energy is electric.)</em></p>
                 </div>
             </div>
         </section>
 
-        <section id="props" class="section props-tips">
-            <div class="container">
-                <h2 class="section-title">🎁 Props & Performance Tips</h2>
-                
-                <div class="props-tips-grid">
-                    <div class="props-card">
-                        <h3>🎁 Props You Can Use (Optional)</h3>
-                        <ul>
-                            <li>Tablets, notebooks, sketches, coffee mugs as symbols of different roles</li>
-                            <li>T-Shirts/Tags with the current role ("Finance", "Marketing", etc.)</li>
-                            <li>Sticky notes/whiteboard for intern or planning roles</li>
-                            <li>Clap, handshake, or fun celebration pose at end</li>
-                        </ul>
-                    </div>
+        <!-- Cast Information -->
+        <section id="cast" class="scene">
+            <div class="scene-header cast">
+                <h2>🎭 Meet the Digital Marketing Team</h2>
+                <p>College students running their own social media marketing agency</p>
+            </div>
 
-                    <div class="tips-card">
-                        <h3>🌟 Tips to Shine</h3>
-                        <div class="tips-list">
-                            <div class="tip">
-                                <span class="tip-number">1</span>
-                                <div class="tip-content">
-                                    <strong>Practice body language:</strong> Show frustration in Scene 1, confidence in Scene 2.
-                                </div>
-                            </div>
-                            <div class="tip">
-                                <span class="tip-number">2</span>
-                                <div class="tip-content">
-                                    <strong>Use pause and expressions:</strong> Make your lines emotional and real.
-                                </div>
-                            </div>
-                            <div class="tip">
-                                <span class="tip-number">3</span>
-                                <div class="tip-content">
-                                    <strong>Be loud and clear:</strong> So even the back row hears you!
-                                </div>
-                            </div>
-                            <div class="tip">
-                                <span class="tip-number">4</span>
-                                <div class="tip-content">
-                                    <strong>Keep roles clear:</strong> Switch roles visibly in Scene 2 (badge change or simple prop swap).
-                                </div>
-                            </div>
-                            <div class="tip">
-                                <span class="tip-number">5</span>
-                                <div class="tip-content">
-                                    <strong>Time each person:</strong> Everyone gets about 20–30 seconds per scene.
-                                </div>
-                            </div>
-                            <div class="tip">
-                                <span class="tip-number">6</span>
-                                <div class="tip-content">
-                                    <strong>Final Line:</strong> Say it together, loudly and with energy!
-                                </div>
-                            </div>
-                        </div>
+            <div class="cast-grid">
+                <div class="cast-member" data-character="hitesh">
+                    <h3>HITESH - The Leader</h3>
+                    <p><strong>Transformation:</strong> Stressed Founder → Confident Strategist</p>
+                    <p><strong>Role:</strong> Team leader who guides the agency through crisis to success</p>
+                </div>
+
+                <div class="cast-member" data-character="lavanya">
+                    <h3>LAVANYA - The Creator</h3>
+                    <p><strong>Transformation:</strong> Frustrated Artist → Innovative Head of Creative</p>
+                    <p><strong>Role:</strong> Content creator who discovers the power of authentic storytelling</p>
+                </div>
+
+                <div class="cast-member" data-character="shraddha">
+                    <h3>SHRADDHA - The Designer</h3>
+                    <p><strong>Transformation:</strong> Defensive Perfectionist → Award-Winning Director</p>
+                    <p><strong>Role:</strong> Visual designer who creates revolutionary brand experiences</p>
+                </div>
+
+                <div class="cast-member" data-character="shravani">
+                    <h3>SHRAVANI - The Manager</h3>
+                    <p><strong>Transformation:</strong> Anxious Multitasker → Platform Growth Specialist</p>
+                    <p><strong>Role:</strong> Operations manager who streamlines multi-platform strategies</p>
+                </div>
+
+                <div class="cast-member" data-character="parth">
+                    <h3>PARTH - The Analyst</h3>
+                    <p><strong>Transformation:</strong> Pessimistic Data-Mind → Performance Marketing Lead</p>
+                    <p><strong>Role:</strong> Data analyst who discovers the key insights for viral success</p>
+                </div>
+
+                <div class="cast-member" data-character="om">
+                    <h3>OM - The Networker</h3>
+                    <p><strong>Transformation:</strong> Demoralized Extrovert → Influencer Partnership Director</p>
+                    <p><strong>Role:</strong> Relationship builder who creates powerful influencer partnerships</p>
+                </div>
+
+                <div class="cast-member" data-character="yashkumar">
+                    <h3>YASHKUMAR - The Technician</h3>
+                    <p><strong>Transformation:</strong> Frustrated Editor → Creative Technology Head</p>
+                    <p><strong>Role:</strong> Video editor and tech specialist who masters viral video production</p>
+                </div>
+
+                <div class="cast-member" data-character="suyash">
+                    <h3>SUYASH - The Salesman</h3>
+                    <p><strong>Transformation:</strong> Defeated Rep → Client Success Manager</p>
+                    <p><strong>Role:</strong> Sales representative who builds lasting client relationships</p>
+                </div>
+            </div>
+
+            <div class="story-summary">
+                <h3>🎯 The Digital Marketing Journey:</h3>
+                <ul>
+                    <li><strong>Authentic Storytelling:</strong> Moving from copying trends to creating genuine content</li>
+                    <li><strong>Team Dynamics:</strong> College students learning to work together under pressure</li>
+                    <li><strong>Crisis to Success:</strong> From near-bankruptcy to Forbes recognition</li>
+                    <li><strong>Social Media Reality:</strong> The challenges and triumphs of digital marketing</li>
+                    <li><strong>Personal Growth:</strong> Each character transforms from their lowest point to their highest potential</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- BridgeMind Scene 1: The Breakdown -->
+        <section id="scene1" class="scene bridgemind-scene">
+            <div class="scene-header breakdown">
+                <h2>🎬 Scene 1: "The Breakdown" (Duration: ~4 minutes)</h2>
+                <div class="scene-setup">
+                    <p>🎵 <strong>Background:</strong> Low, tense music</p>
+                    <p>💡 <strong>Lighting:</strong> Dim</p>
+                    <p>🪑 <strong>Scene setup:</strong> Everyone is scattered, not making eye contact. Display stress and distance.</p>
+                </div>
+            </div>
+
+            <div class="dialogue-container">
+                <div class="dialogue-item" data-character="hitesh-bridge">
+                    <div class="character-info">
+                        <strong>👨‍💼 Hitesh – CEO</strong>
+                        <span class="stage-direction">(center stage, pacing)</span>
+                        <span class="tone">🎙️ (Tone: stressed, angry)</span>
+                    </div>
+                    <div class="dialogue">
+                        "We missed the beta deadline. The lead client just pulled out. We have two weeks of cash. Where did we go wrong?"
                     </div>
                 </div>
 
-                <div class="ready-banner">
-                    <h3>You're now ready to <strong>rock your performance! 🎭🔥</strong></h3>
-                    <p>Break a leg and show the power of teamwork!</p>
+                <div class="dialogue-item" data-character="yash-bridge">
+                    <div class="character-info">
+                        <strong>👨‍💻 Yash – CTO</strong>
+                        <span class="stage-direction">(typing, eyes down)</span>
+                        <span class="tone">🎙️ (Tone: quiet, guilty)</span>
+                    </div>
+                    <div class="dialogue">
+                        "I'm sorry. We underestimated integration time again… I couldn't run the final test build."
+                    </div>
                 </div>
+
+                <div class="dialogue-item" data-character="om-bridge">
+                    <div class="character-info">
+                        <strong>🎨 Om Birla – Designer</strong>
+                        <span class="stage-direction">(holding crumpled UI sketches)</span>
+                        <span class="tone">🎙️ (Tone: emotional, defensive)</span>
+                    </div>
+                    <div class="dialogue">
+                        "You asked for last-minute changes after I finalized the UI. I stayed up 48 hours fixing it!"
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="parth-bridge">
+                    <div class="character-info">
+                        <strong>💰 Parth – Finance</strong>
+                        <span class="stage-direction">(slams notebook down)</span>
+                        <span class="tone">🎙️ (Tone: sharp, factual)</span>
+                    </div>
+                    <div class="dialogue">
+                        "We didn't plan backend testing in the budget at all—that's on you, Yash. We're bleeding money."
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="lavanya-bridge">
+                    <div class="character-info">
+                        <strong>📣 Lavanya – Marketing</strong>
+                        <span class="stage-direction">(waves iPad)</span>
+                        <span class="tone">🎙️ (Tone: exasperated)</span>
+                    </div>
+                    <div class="dialogue">
+                        "We spent 40k on ads, but the landing page barely loaded. What was the point?!"
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="shravani
+
+-bridge">
+                    <div class="character-info">
+                        <strong>📋 shravani
+
+ – Operations</strong>
+                        <span class="stage-direction">(slowly rises, arms crossed)</span>
+                        <span class="tone">🎙️ (Tone: calm but regretful)</span>
+                    </div>
+                    <div class="dialogue">
+                        "No use pointing fingers. The development schedule didn't match the campaign timeline. That was my mistake."
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="Shraddha-bridge">
+                    <div class="character-info">
+                        <strong>🧑‍🎓 Shraddha – Intern</strong>
+                        <span class="stage-direction">(steps forward, nervous)</span>
+                        <span class="tone">🎙️ (Tone: hesitant)</span>
+                    </div>
+                    <div class="dialogue">
+                        "Umm... I forgot to follow up with investors. I thought someone else was handling it. I'm really sorry."
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="Suyash
+
+-bridge">
+                    <div class="character-info">
+                        <strong>🫱 Suyash
+
+ – HR</strong>
+                        <span class="stage-direction">(steps in, calm and compassionate)</span>
+                        <span class="tone">🎙️ (Tone: mediator, firm yet kind)</span>
+                    </div>
+                    <div class="dialogue">
+                        "Enough. Yes, we all made mistakes. But we're still a team. Let's own it, fix it, and fight for a comeback."
+                    </div>
+                </div>
+
+                <div class="stage-direction-block">
+                    <p><em>[Everyone FREEZES. Spotlight on Hitesh.]</em></p>
+                </div>
+
+                <div class="dialogue-item final" data-character="hitesh-bridge">
+                    <div class="character-info">
+                        <strong>Hitesh</strong>
+                        <span class="tone">🎙️ (Tone: slow, determined)</span>
+                    </div>
+                    <div class="dialogue">
+                        "…Fine. We've got 7 days. Let's do this right."<br><br>
+                        <strong>Suyash
+
+</strong>, coordinate retrospectives.<br>
+                        <strong>shravani
+
+</strong>, create a realistic timeline.<br>
+                        <strong>Yash</strong>, simplify the MVP.<br><br>
+                        "Let's pivot—and rebuild BridgeMind."
+                    </div>
+                </div>
+
+                <div class="stage-direction-block">
+                    <p><em>🚦 [Lights fade. Curtain closes. End Scene 1]</em></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BridgeMind Scene 2: The Comeback -->
+        <section id="scene2" class="scene bridgemind-scene">
+            <div class="scene-header comeback">
+                <h2>🎬 Scene 2: "The Comeback" (Duration: ~4 minutes)</h2>
+                <div class="scene-setup">
+                    <p>🎵 <strong>Background:</strong> Uplifting music</p>
+                    <p>💡 <strong>Lighting:</strong> Bright</p>
+                    <p>🪑 <strong>Scene setup:</strong> Team stands in a circle, closer. Smiling, high energy. Props like charts, tablets, etc.</p>
+                    <p>🎭 <strong>Key Concept:</strong> Each person now plays a <strong>new role</strong>, showing growth and teamwork.</p>
+                </div>
+            </div>
+
+            <div class="dialogue-container">
+                <div class="dialogue-item" data-character="yash-bridge">
+                    <div class="character-info">
+                        <strong>👨‍💻 Yash – New CEO</strong>
+                        <span class="stage-direction">(stands confidently with clipboard)</span>
+                        <span class="tone">🎙️ (Tone: firm and cheerful)</span>
+                        <span class="role-change">🔄 Role Switch: CTO → CEO</span>
+                    </div>
+                    <div class="dialogue">
+                        "We focused only on what mattered. Cut noise. Delivered our MVP in 6 days—and the client returned!"
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="parth-bridge">
+                    <div class="character-info">
+                        <strong>📣 Parth – New Marketing Head</strong>
+                        <span class="stage-direction">(holds phone, excited)</span>
+                        <span class="tone">🎙️ (Tone: energetic)</span>
+                        <span class="role-change">🔄 Role Switch: Finance → Marketing</span>
+                    </div>
+                    <div class="dialogue">
+                        "This time, the ad campaign and the final landing page were in sync! 1,200 sign-ups on launch day!"
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="om-bridge">
+                    <div class="character-info">
+                        <strong>🧑‍🎓 Om Birla – New Intern</strong>
+                        <span class="stage-direction">(wide smile, holding a sticky note pad)</span>
+                        <span class="tone">🎙️ (Tone: proud, light)</span>
+                        <span class="role-change">🔄 Role Switch: Designer → Intern</span>
+                    </div>
+                    <div class="dialogue">
+                        "I scheduled standups, tracked Jira, AND organized the snack schedule. I feel... useful!"
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="lavanya-bridge">
+                    <div class="character-info">
+                        <strong>💰 Lavanya – New Finance Lead</strong>
+                        <span class="stage-direction">(points to budget chart)</span>
+                        <span class="tone">🎙️ (Tone: excited, practical)</span>
+                        <span class="role-change">🔄 Role Switch: Marketing → Finance</span>
+                    </div>
+                    <div class="dialogue">
+                        "We revamped the budget. Canceled non-essentials, focused on backend testing first. No overspend at all!"
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="hitesh-bridge">
+                    <div class="character-info">
+                        <strong>👨‍🎨 Hitesh – New Designer</strong>
+                        <span class="stage-direction">(holds tablet, showing final UI)</span>
+                        <span class="tone">🎙️ (Tone: joyful, jokingly confident)</span>
+                        <span class="role-change">🔄 Role Switch: CEO → Designer</span>
+                    </div>
+                    <div class="dialogue">
+                        "I admit it… design isn't easy. But hey, my UI got compliments on LinkedIn!"
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="Suyash
+
+-bridge">
+                    <div class="character-info">
+                        <strong>👩‍💼 Suyash
+
+ – New CTO</strong>
+                        <span class="stage-direction">(holds small whiteboard with 'DONE' tasks)</span>
+                        <span class="tone">🎙️ (Tone: sharp & techy)</span>
+                        <span class="role-change">🔄 Role Switch: HR → CTO</span>
+                    </div>
+                    <div class="dialogue">
+                        "Dev flow was clean. Simple roadmap. Git commits hit every night. Pure joy."
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="Shraddha-bridge">
+                    <div class="character-info">
+                        <strong>📋 Shraddha – New Operations Lead</strong>
+                        <span class="stage-direction">(nods proudly)</span>
+                        <span class="tone">🎙️ (Tone: smooth, calm)</span>
+                        <span class="role-change">🔄 Role Switch: Intern → Operations</span>
+                    </div>
+                    <div class="dialogue">
+                        "With better task alignment, we finished one day early. Now we're operating like a real company."
+                    </div>
+                </div>
+
+                <div class="dialogue-item" data-character="shravani
+
+-bridge">
+                    <div class="character-info">
+                        <strong>🧑‍⚖️ shravani
+
+ – New HR Head</strong>
+                        <span class="stage-direction">(holds team photo or board)</span>
+                        <span class="tone">🎙️ (Tone: warm and supportive)</span>
+                        <span class="role-change">🔄 Role Switch: Operations → HR</span>
+                    </div>
+                    <div class="dialogue">
+                        "We built a safe space. Every voice mattered. We even voted for 'Team Hero of the Week'—guess who won?"
+                    </div>
+                </div>
+
+                <div class="stage-direction-block">
+                    <p><em>[Everyone gathers in center, places hand on team logo or imaginary table.]</em></p>
+                </div>
+
+                <div class="dialogue-item final group" data-character="all-bridge">
+                    <div class="character-info">
+                        <strong>All (together)</strong>
+                    </div>
+                    <div class="dialogue">
+                        "Whatever role we play… TEAMWORK is our real strength!"
+                    </div>
+                </div>
+
+                <div class="stage-direction-block">
+                    <p><em>🎵 [Music swells. Lights fade. Curtain closes. Applause.]</em></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BridgeMind Cast Information -->
+        <section id="bridgecast" class="scene bridgemind-scene">
+            <div class="scene-header cast">
+                <h2>🎭 Meet the BridgeMind Team</h2>
+                <p>8 team members who learn the power of role flexibility</p>
+            </div>
+
+            <div class="cast-grid">
+                <div class="cast-member" data-character="hitesh-bridge">
+                    <h3>👨‍💼 Hitesh</h3>
+                    <p><strong>Scene 1:</strong> CEO (Stressed Leader)</p>
+                    <p><strong>Scene 2:</strong> Designer (Creative Learner)</p>
+                    <p><strong>Growth:</strong> From commanding to creating</p>
+                </div>
+
+                <div class="cast-member" data-character="yash-bridge">
+                    <h3>👨‍💻 Yash</h3>
+                    <p><strong>Scene 1:</strong> CTO (Guilty Technician)</p>
+                    <p><strong>Scene 2:</strong> CEO (Confident Leader)</p>
+                    <p><strong>Growth:</strong> From technical guilt to leadership confidence</p>
+                </div>
+
+                <div class="cast-member" data-character="om-bridge">
+                    <h3>🎨 Om Birla</h3>
+                    <p><strong>Scene 1:</strong> Designer (Defensive Artist)</p>
+                    <p><strong>Scene 2:</strong> Intern (Enthusiastic Organizer)</p>
+                    <p><strong>Growth:</strong> From defensive to supportive</p>
+                </div>
+
+                <div class="cast-member" data-character="parth-bridge">
+                    <h3>💰 Parth</h3>
+                    <p><strong>Scene 1:</strong> Finance (Sharp Critic)</p>
+                    <p><strong>Scene 2:</strong> Marketing Head (Energetic Promoter)</p>
+                    <p><strong>Growth:</strong> From criticism to enthusiasm</p>
+                </div>
+
+                <div class="cast-member" data-character="lavanya-bridge">
+                    <h3>📣 Lavanya</h3>
+                    <p><strong>Scene 1:</strong> Marketing (Exasperated Promoter)</p>
+                    <p><strong>Scene 2:</strong> Finance Lead (Practical Planner)</p>
+                    <p><strong>Growth:</strong> From frustration to strategic thinking</p>
+                </div>
+
+                <div class="cast-member" data-character="shravani
+
+-bridge">
+                    <h3>📋 shravani
+
+</h3>
+                    <p><strong>Scene 1:</strong> Operations (Regretful Manager)</p>
+                    <p><strong>Scene 2:</strong> HR Head (Supportive Leader)</p>
+                    <p><strong>Growth:</strong> From regret to team building</p>
+                </div>
+
+                <div class="cast-member" data-character="Shraddha-bridge">
+                    <h3>🧑‍🎓 Shraddha</h3>
+                    <p><strong>Scene 1:</strong> Intern (Nervous Beginner)</p>
+                    <p><strong>Scene 2:</strong> Operations Lead (Confident Manager)</p>
+                    <p><strong>Growth:</strong> From nervousness to operational excellence</p>
+                </div>
+
+                <div class="cast-member" data-character="Suyash
+
+-bridge">
+                    <h3>🫱 Suyash
+
+</h3>
+                    <p><strong>Scene 1:</strong> HR (Mediating Peacemaker)</p>
+                    <p><strong>Scene 2:</strong> CTO (Technical Expert)</p>
+                    <p><strong>Growth:</strong> From mediation to technical leadership</p>
+                </div>
+            </div>
+
+            <div class="story-summary">
+                <h3>🎁 Performance Tips & Props:</h3>
+                <ul>
+                    <li><strong>Props:</strong> Tablets, notebooks, sketches, coffee mugs, role badges</li>
+                    <li><strong>Body Language:</strong> Show frustration in Scene 1, confidence in Scene 2</li>
+                    <li><strong>Voice:</strong> Use pause and expressions, be loud and clear</li>
+                    <li><strong>Role Switching:</strong> Make role changes visible with props or badges</li>
+                    <li><strong>Timing:</strong> Each person gets 20-30 seconds per scene</li>
+                    <li><strong>Final Line:</strong> Say it together, loudly and with energy!</li>
+                </ul>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 BridgeMind: The Corporate Drama. Ready to perform! 🎭</p>
-        </div>
+    <footer>
+        <p>&copy; 2024 From Zero to Viral. A story of digital transformation and team resilience.</p>
     </footer>
 
     <script src="script.js"></script>
